@@ -1,0 +1,90 @@
+<html>
+  <head>
+    <title></title>
+    <style>
+      body {
+        padding: 50px;
+        font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+        color: #5C5C5C;
+      }
+
+      a {
+        text-decoration: none;
+        color: #999;
+      }
+
+      a.current, a:hover {
+        text-decoration: underline;
+        color: #000;
+      }
+
+      ul {
+        margin: 0;
+        padding: 0;
+      }
+
+      li {
+        display: inline-block;
+        margin-right: 20px;
+      }
+
+      .jumbotron, #time {
+        color: rgb(20, 189, 147);
+        font-size: 2em;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>
+        <a href="https://github.com/typicode/pegasus">GitHub</a>
+      </li>
+      <li>
+        <a href="index.html">without Pegasus</a>
+      </li>
+      <li>
+        <a href="with.html" class="current">with Pegasus</a>
+      </li>
+    </ul>
+
+    <p class="jumbotron">
+      Time to display data<br>
+      <span id="time">&nbsp;</span>
+    </p>
+    <p>
+      <strong>Data</strong>: <span id="data">&nbsp;</span>
+    </p>
+
+    <p>
+      <em>For better results, disable cache and reload many times.</em>
+    </p>
+    
+    <p>
+      Built by <a href="https://github.com/typicode">@typicode</a>
+    </p>
+
+    <script>
+      var start = new Date().getTime();
+    </script>
+
+    <script src="scripts/pegasus.js"></script>
+    <script>
+      var request = pegasus('post.json');
+    </script>
+    
+    <script src="scripts/jquery.min.js"></script>
+    <script>
+      $(function() {
+        request.then(function(data) {
+
+          var end = new Date().getTime(),
+              time = ((end - start) / 1000).toFixed(3);
+
+          $('#data').text(data.title);
+          $('#time').text(time + 's');
+
+        });
+      });
+    </script>
+  </body>
+</html>
