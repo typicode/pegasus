@@ -1,4 +1,4 @@
-# Pegasus
+# Pegasus [![Bower version](https://badge.fury.io/bo/pegasus.svg)](http://badge.fury.io/bo/pegasus)
 
 > Improve your app loading time using JavaScript only.
 
