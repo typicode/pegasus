@@ -17,7 +17,7 @@ Also Pegasus is incredibly small, 97b min/gzipped, you won't even notice it's he
 
 ## Show me
 
-_NOTE: I'm using jQuery for illustration only but Pegasus can be used with any other JavaScript library/framework/code._
+_NOTE: I'm using jQuery for illustration only but Pegasus is dependency-free and thus can be used with any other JavaScript library/framework/code._
 
 __[Live example can be found here](http://typicode.github.io/pegasus/).__
 
@@ -29,7 +29,7 @@ JSON is loaded after jQuery.
 
 ### with
 
-With Pegasus, JSON starts loading as soon as Pegasus has finished loading. And this way, data is available even before jQuery, resulting in data displayed faster.
+With Pegasus, JSON starts loading as soon as Pegasus has finished loading. As you can see in this screenshot, it's even available before jQuery. This results in data being displayed much faster.
 
 ![with](http://i.imgur.com/Qnri0RS.png)
 
