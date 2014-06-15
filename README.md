@@ -13,7 +13,7 @@ Using Pegasus, you can do this instead:
 1. __Load script(s) AND data in parallel__
 2. Start app
 
-Also Pegasus is incredibly small, 100b min/gzipped, you won't even notice it's here.
+Also Pegasus is incredibly small, 97b min/gzipped, you won't even notice it's here.
 
 ## Show me
 
