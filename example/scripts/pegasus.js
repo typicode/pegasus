@@ -1,28 +1,36 @@
-// code is written in a way to reduce filesize
-function pegasus(url) {
-  var xhr = new XMLHttpRequest();
+//
+// Disclaimer: using byte saving techniques
+//
+// a   url
+// xhr placeholder to avoid using var
+function pegasus(a, xhr) {
+  xhr = new XMLHttpRequest();
   
-  var promise = {
-    then: function(onSuccess, onError) {
-      // trick to reduce filesize a little more
-      this.true  = onSuccess;
-      this.false = onError;
-      execute();
-    }
+  // Open url
+  xhr.open('GET', a);
+
+  // Reuse a to store callbacks
+  a = [];
+
+  // cb placeholder to avoid using var
+  xhr.onload = xhr.then = function(onSuccess, onError, cb) {
+    // test if onSuccess is a function or a load event
+    if (onSuccess.call) a = [,onSuccess, onError];
+
+    // index will be:
+    // 0 if undefined
+    // 1 if status is between 200 and 399
+    // 2 if status is over
+    cb = a[0|xhr.status / 200];
+
+    // Safari doesn't support xhr.responseType = 'json'
+    // so the response is parsed
+    if (cb) cb(JSON.parse(xhr.responseText, xhr));
   };
 
-  var execute = function() {
-    var callback = promise[this.status < 400];
-    if (callback && this.status) {
-      // Needed by Safari, until xhr.responseType = 'json' is supported
-      var data = JSON.parse(this.responseText);
-      callback(data, xhr);
-    }
-  };
-
-  xhr.open('GET', url);
-  xhr.onload = execute;
+  // Send
   xhr.send();
 
-  return promise;
+  // Return request
+  return xhr;
 }
