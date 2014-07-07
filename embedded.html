@@ -68,7 +68,9 @@
     </script>
 
     <script>
-    function pegasus(a,b){return b=new XMLHttpRequest,b.open("GET",a),a=[],b.onload=function(b,c,d){b.call&&(a=[,b,c]),d=a[0|this.status/200],d&&d(JSON.parse(this.responseText,this))},b.send(),b.then=b.onload,b}
+      function pegasus(a,b){return b=new XMLHttpRequest,b.open("GET",a),a=[],
+      b.onload=function(b,c,d){b.call&&(a=[,b,c]),d=a[0|this.status/200],
+      d&&d(JSON.parse(this.responseText,this))},b.send(),b.then=b.onload,b}
     </script>
     <script>
       var request = pegasus('post.json');
