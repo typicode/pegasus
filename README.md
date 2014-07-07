@@ -18,15 +18,13 @@ load script
     →  load json
 ```
 
-Pegasus is a tiny (84 bytes min/gzip) and dependency-free lib that lets you download data while loading other scripts.
+Pegasus is a tiny lib (84 bytes min/gzip) that lets you load data while loading other scripts. 
 
-Using this technique, you can display data faster in single page apps without touching the server.
+Using this technique, you can reduce the time to display data in single page apps without touching the server.
 
 ## Benchmark
 
-__http://typicode.github.io/pegasus__
-
-Time to display data:
+Average time to display data on http://typicode.github.io/pegasus
 
 |             | jQuery only  | jQuery + Pegasus  |
 |:------------|:-------------|:------------------|
@@ -50,7 +48,7 @@ _* Network Link Conditioner was used to slow down connection._
 <!-- Load your app lib(s) -->
 <script src="jquery.js"></script>
 
-<!-- Use request promise to retrieve data -->
+<!-- Use the request promise to retrieve data in your app -->
 <script>
 $(function() {
 
@@ -67,4 +65,10 @@ $(function() {
 </script>
 ```
 
-__Tip__: You can also directly embed [pegasus.min.js](https://github.com/typicode/pegasus/blob/master/pegasus.min.js) into your html file to save a network call (it's smaller than the Google analytics tracking).
+__Note__: The same method can be applied with any other JavaScript library (Backbone, AngularJS, ...).
+
+__Tip__: You can also directly embed [pegasus.min.js](https://github.com/typicode/pegasus/blob/master/pegasus.min.js) into your html file to save a network call (it's smaller than the Google analytics tracking code).
+
+## See also
+
+https://github.com/typicode/backbone-pegasus

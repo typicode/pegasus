@@ -14,13 +14,15 @@
     "http",
     "request",
     "XMLHttpRequest",
-    "parallel",
     "data",
+    "json"
     "bootstrap",
     "performance",
     "optimization",
     "load",
-    "loading"
+    "loader",
+    "preload",
+    "preloader"
   ],
   "license": "MIT",
   "ignore": [
