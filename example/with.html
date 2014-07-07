@@ -28,6 +28,12 @@
         margin-right: 20px;
       }
 
+      .notice {
+        background: #F1F1F1;
+        padding: 10px;
+        display: inline-block;
+      }
+
       .jumbotron, #time {
         color: rgb(20, 189, 147);
         font-size: 2em;
@@ -55,9 +61,14 @@
       <strong>Data</strong>: <span id="data">&nbsp;</span>
     </p>
 
-    <p>
-      <em>For better results, disable cache and reload many times.</em>
-    </p>
+    <div class="notice">
+      <p>
+        Data <strong>and</strong> jQuery are loaded almost at the same time.
+      </p>
+      <p>
+        <em>To see what's happening, open your developer tools, disable cache and reload many times.</em>
+      </p>
+    </div>
     
     <p>
       Built by <a href="https://github.com/typicode">@typicode</a>
