@@ -1,7 +1,7 @@
 //
 // Disclaimer: using byte saving techniques
 //
-// a   url
+// a   url (naming it a, beacause it will be reused to store callbacks)
 // xhr placeholder to avoid using var
 function pegasus(a, xhr) {
   xhr = new XMLHttpRequest();
@@ -13,19 +13,24 @@ function pegasus(a, xhr) {
   a = [];
 
   // cb placeholder to avoid using var
-  xhr.onload = xhr.then = function(onSuccess, onError, cb) {
-    // test if onSuccess is a function or a load event
+  xhr.onreadystatechange = xhr.then = function(onSuccess, onError, cb) {
+
+    // Test if onSuccess is a function or a load event
     if (onSuccess.call) a = [,onSuccess, onError];
 
-    // index will be:
-    // 0 if undefined
-    // 1 if status is between 200 and 399
-    // 2 if status is over
-    cb = a[0|xhr.status / 200];
+    // Test if request is complete
+    if (xhr.readyState == 4) {
 
-    // Safari doesn't support xhr.responseType = 'json'
-    // so the response is parsed
-    if (cb) cb(JSON.parse(xhr.responseText, xhr));
+      // index will be:
+      // 0 if undefined
+      // 1 if status is between 200 and 399
+      // 2 if status is over
+      cb = a[0|xhr.status / 200];
+
+      // Safari doesn't support xhr.responseType = 'json'
+      // so the response is parsed
+      if (cb) cb(JSON.parse(xhr.responseText, xhr));
+    }
   };
 
   // Send
