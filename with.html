@@ -32,6 +32,7 @@
         background: #F1F1F1;
         padding: 10px;
         display: inline-block;
+        max-width: 620px;
       }
 
       .jumbotron, #time {
@@ -63,10 +64,10 @@
 
     <div class="notice">
       <p>
-        Data <strong>and</strong> jQuery are loaded almost at the same time.
+        JSON <strong>and</strong> jQuery are loaded almost at the same time.
       </p>
       <p>
-        <em>To see what's happening, open your developer tools, disable cache and reload many times.</em>
+        <em>To see what's happening, open the network tab in your developer tools, disable cache and reload many times.</em>
       </p>
     </div>
     
@@ -78,7 +79,7 @@
       var start = new Date().getTime();
     </script>
 
-    <script src="scripts/pegasus.min.js"></script>
+    <script src="scripts/pegasus.js"></script>
     <script>
       var request = pegasus('post.json');
     </script>
