@@ -72,3 +72,7 @@ __Tip__: You can also directly embed [pegasus.min.js](https://github.com/typicod
 ## See also
 
 https://github.com/typicode/backbone-pegasus
+
+## Support
+
+All modern browsers and IE7+
