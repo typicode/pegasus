@@ -5,7 +5,7 @@
   "authors": [
     "Typicode <typicode@gmail.com>"
   ],
-  "description": "Improve your app loading time using JavaScript only. Parallel ajax requests and data bootstrapping.",
+  "description": "Load JSON data while loading other scripts. Works with jQuery, Backbone, Angular...",
   "main": "pegasus.js",
   "keywords": [
     "ajax",

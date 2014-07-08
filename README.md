@@ -1,6 +1,6 @@
 # Pegasus [![Bower version](https://badge.fury.io/bo/pegasus.svg)](http://badge.fury.io/bo/pegasus)
 
-> Faster data display in single page apps
+> Display data faster in single page apps
 
 Do this
 
