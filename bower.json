@@ -5,7 +5,7 @@
   "authors": [
     "Typicode <typicode@gmail.com>"
   ],
-  "description": "Load JSON data while loading other scripts. Works with jQuery, Backbone, Angular...",
+  "description": "Mini xhr + promise. Load JSON data while loading other scripts works with jQuery, Backbone, Angular...",
   "main": "pegasus.js",
   "keywords": [
     "ajax",
@@ -15,7 +15,7 @@
     "request",
     "XMLHttpRequest",
     "data",
-    "json"
+    "json",
     "bootstrap",
     "performance",
     "optimization",
