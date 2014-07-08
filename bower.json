@@ -1,11 +1,11 @@
 {
   "name": "pegasus",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "homepage": "https://github.com/typicode/pegasus",
   "authors": [
     "Typicode <typicode@gmail.com>"
   ],
-  "description": "Mini xhr + promise. Load JSON data while loading other scripts works with jQuery, Backbone, Angular...",
+  "description": "Mini xhr + promise. Display data faster in single page apps (jQuery, Backbone, Angular...).",
   "main": "pegasus.js",
   "keywords": [
     "ajax",
