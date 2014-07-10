@@ -29,7 +29,7 @@
     "**/.*",
     "node_modules",
     "bower_components",
-    "test",
-    "tests"
+    "gruntfile.js",
+    "package.json"
   ]
 }
