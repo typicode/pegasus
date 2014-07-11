@@ -18,7 +18,7 @@ load script
     →  load json
 ```
 
-Pegasus is a tiny lib (__less than 0.1 kB__ min/gzip) that lets you load data while loading other scripts. 
+Pegasus is a tiny lib (less than 0.1 kB min/gzip) that lets you load data while loading other scripts. 
 
 Using this technique, you can reduce the time to display data in single page apps without touching the server.
 
