@@ -5,7 +5,7 @@ module.exports = function(grunt) {
     uglify: {
       options: {
         report: 'gzip',
-        banner: '/* <%= bower.version %> */\n'
+        banner: '//<%= bower.version %>\n'
       },
       dist: {
         files: {
@@ -17,7 +17,7 @@ module.exports = function(grunt) {
       files: ['<%= bower.name %>.js']
     },
     watch: {
-      files: '<%= jshint.files %>',
+      files: ['gruntfile.js', '<%= jshint.files %>'],
       tasks: 'build',
       options: {
         atBegin: true
