@@ -34,6 +34,8 @@ Average time to display data on http://typicode.github.io/pegasus
 
 _* Network Link Conditioner was used to slow down connection._
 
+_** jQuery is used for illustration only, you can use Pegasus with any other Javascript library._
+
 ## Usage
 
 ```html
