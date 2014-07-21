@@ -50,7 +50,13 @@
         <a href="index.html">without Pegasus</a>
       </li>
       <li>
-        <a href="with.html" class="current">with Pegasus</a>
+        <a href="with-embedded.html" class="current">with Pegasus [embedded]</a>
+      </li>
+      <li>
+        <a href="with.html">with Pegasus [script]</a>
+      </li>
+      <li>
+        <a href="screenshots.html">screenshots</a>
       </li>
     </ul>
 
@@ -71,6 +77,10 @@
           To see what's happening, open the network tab in your developer tools,
           disable cache and reload many times.
         </em>
+      </p>
+      <p>
+        If you have a very fast connection, you may not see a real difference,
+        check the <a href="screenshots.html">screenshots</a>.
       </p>
     </div>
     
@@ -93,16 +103,14 @@
     
     <script src="scripts/jquery.min.js"></script>
     <script>
-      $(function() {
-        request.then(function(data) {
+      request.then(function(data) {
 
-          var end = new Date().getTime(),
-              time = ((end - start) / 1000).toFixed(3);
+        var end = new Date().getTime(),
+            time = ((end - start) / 1000).toFixed(3);
 
-          $('#data').text(data.title);
-          $('#time').text(time + 's');
+        $('#data').text(data.title);
+        $('#time').text(time + 's');
 
-        });
       });
     </script>
   </body>

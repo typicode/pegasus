@@ -50,7 +50,10 @@
         <a href="index.html" class="current">without Pegasus</a>
       </li>
       <li>
-        <a href="with.html">with Pegasus</a>
+        <a href="with-embedded.html">with Pegasus [embedded]</a>
+      </li>
+      <li>
+        <a href="with.html">with Pegasus [script]</a>
       </li>
       <li>
         <a href="screenshots.html">screenshots</a>
@@ -76,7 +79,8 @@
         </em>
       </p>
       <p>
-        If you have a very fast connection, you may not see a real difference, check the <a href="screenshots.html">[screenshot]</a>
+        If you have a very fast connection, you may not see a real difference,
+        check the <a href="screenshots.html">screenshots</a>.
       </p>
     </div>
     
@@ -90,16 +94,14 @@
 
     <script src="scripts/jquery.min.js"></script>
     <script>
-      $(function() {
-        $.ajax('post.json').then(function(data) {
+      $.ajax('post.json').then(function(data) {
 
-          var end = new Date().getTime(),
-              time = ((end - start) / 1000).toFixed(3);
+        var end = new Date().getTime(),
+            time = ((end - start) / 1000).toFixed(3);
 
-          $('#data').text(data.title);
-          $('#time').text(time + 's');
+        $('#data').text(data.title);
+        $('#time').text(time + 's');
 
-        });
       });
     </script>
   </body>
