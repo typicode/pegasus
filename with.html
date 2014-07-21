@@ -70,7 +70,7 @@
 
     <div class="notice">
       <p>
-        JSON and jQuery are loaded in parallel.
+        JSON <strong>and</strong> jQuery are loaded in parallel.
       </p>
       <p>
         <em>
@@ -89,11 +89,14 @@
       Built by <a href="https://github.com/typicode">@typicode</a>
     </p>
 
+    <!-- This is where things are happening -->
     <script>
       var start = new Date().getTime();
     </script>
 
     <script src="scripts/pegasus.min.js"></script>
+
+    <!-- Request will be started as soon as pegasus.min.js is loaded -->
     <script>
       var request = pegasus('post.json');
     </script>
