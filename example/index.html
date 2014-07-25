@@ -1,6 +1,7 @@
 <html>
   <head>
-    <title>Without Pegasus</title>
+    <title>Pegasus</title>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:300' rel='stylesheet' type='text/css'>
     <style>
       body {
         padding: 50px;
@@ -21,6 +22,7 @@
       ul {
         margin: 0;
         padding: 0;
+        text-align: center;
       }
 
       li {
@@ -29,7 +31,7 @@
       }
 
       .notice {
-        background: #F9F9F9;
+        background: #F1F1F1;
         padding: 10px;
         display: inline-block;
         max-width: 620px;
@@ -39,6 +41,31 @@
         color: rgb(20, 189, 147);
         font-size: 2em;
       }
+
+      ul {
+        margin-bottom: 120px
+      }
+
+      h1 {
+        text-align: center;
+        color: rgb(20, 189, 147);
+        font-size: 96px;
+        font-family: Raleway; 
+        font-weight: 300;
+        margin: 120px 0 60px 0;
+      }
+
+      h2, p {
+        text-align: center
+      }
+
+      #intro {
+        margin-bottom: 180px
+      }
+
+      #screenshots p {
+        margin-bottom: 60px;
+      }
     </style>
   </head>
   <body>
@@ -47,7 +74,10 @@
         <a href="https://github.com/typicode/pegasus">GitHub</a>
       </li>
       <li>
-        <a href="index.html" class="current">without Pegasus</a>
+        <a href="index.html" class="current">intro</a>
+      </li>
+      <li>
+        <a href="without.html">without Pegasus</a>
       </li>
       <li>
         <a href="with-embedded.html">with Pegasus [embedded]</a>
@@ -55,52 +85,41 @@
       <li>
         <a href="with.html">with Pegasus [script]</a>
       </li>
-      <li>
-        <a href="screenshots.html">screenshots</a>
-      </li>
     </ul>
 
-    <p class="jumbotron">
-      Time to display data<br>
-      <span id="time">&nbsp;</span>
-    </p>
-    <p>
-      <strong>Data</strong>: <span id="data">&nbsp;</span>
-    </p>
+    <div id="intro">
+      <h1>Pegasus</h1>
+      <h2>Load data while loading other scripts</h2>
 
-    <div class="notice">
+      <p><em>Pegasus is a imple solution to improve your app loading time when server-side data bootstrapping is not an option.</em></p>
+    </div>
+
+    <div id="screenshots">
       <p>
-        JSON is loaded <strong>after</strong> jQuery.
+        without Pegasus<br>
+        <img src="http://i.imgur.com/kDMGXs1.png">
       </p>
+
       <p>
-          On average data is displayed faster with Pegasus. To see it, it's
-          recommended to <strong>disable cache</strong> and <strong>reload many times</strong>.
+        with Pegasus [embedded]<br>
+        <img src="http://i.imgur.com/8sVBtnB.png">
       </p>
+
       <p>
-          You can also check the <a href="screenshots.html">screenshots</a>.
+        with Pegasus [script]<br>
+        <img src="http://i.imgur.com/oLWwlAF.png">
+      </p>
+
+      <p>
+        <em>
+          * jQuery is used for illustration only, you can use Pegasus with any other
+          Javascript library
+        </em>
       </p>
     </div>
-    
+
     <p>
       Built by <a href="https://github.com/typicode">@typicode</a>
     </p>
-
-    <!-- This is where things are happening -->
-    <script>
-      var start = new Date().getTime();
-    </script>
-
-    <script src="scripts/jquery.min.js"></script>
-    <script>
-      $.ajax('post.json').then(function(data) {
-
-        var end = new Date().getTime(),
-            time = ((end - start) / 1000).toFixed(3);
-
-        $('#data').text(data.title);
-        $('#time').text(time + 's');
-
-      });
-    </script>
   </body>
 </html>
