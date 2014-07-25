@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>With Pegasus [script]</title>
+    <title>Without Pegasus</title>
     <style>
       body {
         padding: 50px;
@@ -53,13 +53,13 @@
         <a href="index.html">intro</a>
       </li>
       <li>
-        <a href="without.html">without Pegasus</a>
+        <a href="without.html" class="current">without Pegasus</a>
       </li>
       <li>
         <a href="with-embedded.html">with Pegasus [embedded]</a>
       </li>
       <li>
-        <a href="with.html" class="current">with Pegasus [script]</a>
+        <a href="with.html">with Pegasus [script]</a>
       </li>
     </ul>
 
@@ -73,14 +73,14 @@
 
     <div class="notice">
       <p>
-        JSON and jQuery are loaded <strong>in parallel</strong>.
+        JSON is loaded <strong>after</strong> jQuery.
       </p>
       <p>
-        On average data is displayed faster with Pegasus. To see it, it's 
-        recommended to <strong>disable cache</strong> and <strong>reload many times</strong>.
+          On average data is displayed faster with Pegasus. To see it, it's
+          recommended to <strong>disable cache</strong> and <strong>reload many times</strong>.
       </p>
       <p>
-        You can also check the <a href="screenshots.html">screenshots</a>.
+          You can also check the <a href="screenshots.html">screenshots</a>.
       </p>
     </div>
     
@@ -93,16 +93,9 @@
       var start = new Date().getTime();
     </script>
 
-    <script src="scripts/pegasus.min.js"></script>
-    
-    <!-- Request will be started as soon as pegasus.min.js is loaded -->
-    <script>
-      var request = pegasus('post.json');
-    </script>
-    
     <script src="scripts/jquery.min.js"></script>
     <script>
-      request.then(function(data) {
+      $.ajax('post.json').then(function(data) {
 
         var end = new Date().getTime(),
             time = ((end - start) / 1000).toFixed(3);
