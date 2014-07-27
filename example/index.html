@@ -4,8 +4,8 @@
     <link href='http://fonts.googleapis.com/css?family=Raleway:300' rel='stylesheet' type='text/css'>
     <style>
       body {
-        padding: 50px;
         font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+        padding: 50px;
         color: #5C5C5C;
       }
 
@@ -27,44 +27,45 @@
 
       li {
         display: inline-block;
-        margin-right: 20px;
+        margin: 0 10px 0 10px;
+      }
+
+      
+      h1 {
+        font-size: 96px;
+        font-family: Raleway; 
+        font-weight: 300;
+        margin: 120px 0 60px 0;
+        color: rgb(20, 189, 147);
+      }
+
+      #intro {
+        margin-bottom: 160px;
+      }
+
+      .block {
+        padding-bottom: 80px;
+      }
+
+      .center {
+        text-align: center;
+      }
+
+      .narrow {
+        max-width: 620px;
+        margin-left: auto;
+        margin-right: auto;
       }
 
       .notice {
-        background: #F1F1F1;
+        background: #F9F9F9;
         padding: 10px;
         display: inline-block;
-        max-width: 620px;
       }
 
       .jumbotron, #time {
         color: rgb(20, 189, 147);
         font-size: 2em;
-      }
-
-      ul {
-        margin-bottom: 120px
-      }
-
-      h1 {
-        text-align: center;
-        color: rgb(20, 189, 147);
-        font-size: 96px;
-        font-family: Raleway; 
-        font-weight: 300;
-        margin: 120px 0 60px 0;
-      }
-
-      h2, p {
-        text-align: center
-      }
-
-      #intro {
-        margin-bottom: 180px
-      }
-
-      #screenshots p {
-        margin-bottom: 60px;
       }
     </style>
   </head>
@@ -87,39 +88,52 @@
       </li>
     </ul>
 
-    <div id="intro">
-      <h1>Pegasus</h1>
-      <h2>Load data while loading other scripts</h2>
+    <div class="center">
+      <div id="intro" class="narrow">
+        <h1>Pegasus</h1>
+        <h2>Load data in parallel with your other scripts</h2>
 
-      <p><em>Pegasus is a imple solution to improve your app loading time when server-side data bootstrapping is not an option.</em></p>
-    </div>
+        <p>
+          <em>
+            Pegasus is a simple solution to improve your app loading time when server-side data bootstrapping is not an option.
+          </em>
+        </p>   
+      </div>
 
-    <div id="screenshots">
-      <p>
-        without Pegasus<br>
-        <img src="http://i.imgur.com/kDMGXs1.png">
-      </p>
+      <div class="block">
+        <h2>Without</h2>
+        <p>Data is loaded only after library is loaded (not very efficient).</p>
+        <p>
+          <img src="http://i.imgur.com/ves4uIf.png">
+        </p>
+      </div>
 
-      <p>
-        with Pegasus [embedded]<br>
-        <img src="http://i.imgur.com/8sVBtnB.png">
-      </p>
+      <div class="block">
+        <h2>With Pegasus [embedded]</h2>
+        <p>Data is loaded in parallel with the library.</p>
+        <p>
+          <img src="http://i.imgur.com/8sVBtnB.png">
+        </p>
+      </div>
 
-      <p>
-        with Pegasus [script]<br>
-        <img src="http://i.imgur.com/oLWwlAF.png">
-      </p>
+      <div class="block">
+        <h2>With Pegasus [script]</h2>
+        <p>Data is loaded as soon as Pegasus is loaded.</p>
+        <p>
+          <img src="http://i.imgur.com/oLWwlAF.png">
+        </p>        
+      </div>
 
       <p>
         <em>
           * jQuery is used for illustration only, you can use Pegasus with any other
-          Javascript library
+          Javascript library.
         </em>
       </p>
-    </div>
 
-    <p>
-      Built by <a href="https://github.com/typicode">@typicode</a>
-    </p>
+      <p>
+        Built by <a href="https://github.com/typicode">@typicode</a>
+      </p>
+    </div>
   </body>
 </html>

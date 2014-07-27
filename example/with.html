@@ -3,11 +3,9 @@
     <title>With Pegasus [script]</title>
     <style>
       body {
-        padding: 50px;
         font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+        padding: 50px;
         color: #5C5C5C;
-        max-width: 680px;
-        margin: 0 auto;
       }
 
       a {
@@ -28,14 +26,40 @@
 
       li {
         display: inline-block;
-        margin-right: 20px;
+        margin: 0 10px 0 10px;
+      }
+
+      
+      h1 {
+        font-size: 96px;
+        font-family: Raleway; 
+        font-weight: 300;
+        margin: 120px 0 60px 0;
+        color: rgb(20, 189, 147);
+      }
+
+      #intro {
+        margin-bottom: 160px;
+      }
+
+      .block {
+        padding-bottom: 80px;
+      }
+
+      .center {
+        text-align: center;
+      }
+
+      .narrow {
+        max-width: 620px;
+        margin-left: auto;
+        margin-right: auto;
       }
 
       .notice {
         background: #F9F9F9;
         padding: 10px;
         display: inline-block;
-        max-width: 620px;
       }
 
       .jumbotron, #time {
@@ -63,30 +87,29 @@
       </li>
     </ul>
 
-    <p class="jumbotron">
-      Time to display data<br>
-      <span id="time">&nbsp;</span>
-    </p>
-    <p>
-      <strong>Data</strong>: <span id="data">&nbsp;</span>
-    </p>
+    <div class="narrow">
+      <p class="jumbotron">
+        Time to display data<br>
+        <span id="time">&nbsp;</span>
+      </p>
+      <p>
+        <strong>Data</strong>: <span id="data">&nbsp;</span>
+      </p>
 
-    <div class="notice">
+      <div class="notice">
+        <p>
+          Data and jQuery are loaded <strong>in parallel</strong>.
+        </p>
+        <p>
+          On average data is displayed faster with Pegasus. To see it, it's 
+          recommended to <strong>disable cache</strong> and <strong>reload many times</strong>.
+        </p>
+      </div>
+      
       <p>
-        JSON and jQuery are loaded <strong>in parallel</strong>.
-      </p>
-      <p>
-        On average data is displayed faster with Pegasus. To see it, it's 
-        recommended to <strong>disable cache</strong> and <strong>reload many times</strong>.
-      </p>
-      <p>
-        You can also check the <a href="screenshots.html">screenshots</a>.
-      </p>
+        Built by <a href="https://github.com/typicode">@typicode</a>
+      </p>      
     </div>
-    
-    <p>
-      Built by <a href="https://github.com/typicode">@typicode</a>
-    </p>
 
     <!-- This is where things are happening -->
     <script>
