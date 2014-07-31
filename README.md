@@ -38,10 +38,10 @@ _* Network Link Conditioner was used to slow down connection._
 
 _** jQuery is used for illustration only, you can use Pegasus with any other Javascript library._
 
-## Usage
+## Usage example
 
 ```html
-<!-- Load Pegasus and start request(s) before loading any other script -->
+<!-- Load (or embed) Pegasus and start request(s) before loading any other script -->
 <script src="pegasus.min.js"></script>
 
 <!-- Request will start as soon as Pegasus is loaded -->
@@ -54,18 +54,17 @@ _** jQuery is used for illustration only, you can use Pegasus with any other Jav
 
 <!-- Use the request promise to retrieve data in your app -->
 <script>
-$(function() {
-
   request.then(
     function(data, xhr) {
-      // success
+      // success - xhr.status < 400
+      // do something useful like
+      $('#data').text(JSON.stringify(data));
     },
     function(data, xhr) {
-      // error (optional)
+      // error (optional) - xhr.status >= 400
+      console.error(data, xhr.status)
     }
   );
-  
-})
 </script>
 ```
 
