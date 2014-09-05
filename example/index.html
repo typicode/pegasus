@@ -30,10 +30,10 @@
         margin: 0 10px 0 10px;
       }
 
-      
+
       h1 {
         font-size: 96px;
-        font-family: Raleway; 
+        font-family: Raleway;
         font-weight: 300;
         letter-spacing: 10px;
         margin: 120px 0 60px 0;
@@ -68,6 +68,20 @@
         color: rgb(20, 189, 147);
         font-size: 2em;
       }
+
+      a.button {
+        background: rgb(20, 189, 147);
+        color: #FFFFFF;
+        display: inline-block;
+        padding: 10px;
+        border-radius: 5px;
+      }
+
+      a.button:hover {
+        background: rgb(30, 199, 157);
+        color: default;
+        text-decoration: none;
+      }
     </style>
   </head>
   <body>
@@ -98,7 +112,7 @@
           <em>
             Pegasus is a simple JavaScript solution to improve your app loading time when server-side data bootstrapping is not an option.
           </em>
-        </p>   
+        </p>
       </div>
 
       <div class="block">
@@ -106,6 +120,9 @@
         <p>Data is loaded only after library is loaded (not very efficient).</p>
         <p>
           <img src="http://i.imgur.com/ves4uIf.png">
+        </p>
+        <p>
+          <a href="without.html" class="button">Run live example</a>
         </p>
       </div>
 
@@ -115,6 +132,9 @@
         <p>
           <img src="http://i.imgur.com/8sVBtnB.png">
         </p>
+        <p>
+          <a href="with-embedded.html" class="button">Run live example</a>
+        </p>
       </div>
 
       <div class="block">
@@ -122,7 +142,10 @@
         <p>Data is loaded as soon as Pegasus is loaded.</p>
         <p>
           <img src="http://i.imgur.com/oLWwlAF.png">
-        </p>        
+        </p>
+        <p>
+          <a href="with.html" class="button">Run live example</a>
+        </p>
       </div>
 
       <p>
