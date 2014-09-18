@@ -1,6 +1,6 @@
 # Pegasus [![Bower version](https://badge.fury.io/bo/pegasus.svg)](http://badge.fury.io/bo/pegasus)
 
-> Display data faster in single page apps
+> Load data while still loading other scripts
 
 Do this
 
