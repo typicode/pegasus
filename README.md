@@ -22,6 +22,10 @@ Pegasus is a tiny lib (0.2 kB min/gzip) that lets you load data while loading ot
 
 Using this technique, you can reduce the time to display data in single page apps without touching the server.
 
+```bash
+$ bower install pegasus
+```
+
 ## Benchmark
 
 Average time to display data on http://typicode.github.io/pegasus
