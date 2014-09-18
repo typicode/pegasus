@@ -4,13 +4,19 @@ module.exports = function(grunt) {
     bower: grunt.file.readJSON('bower.json'),
     uglify: {
       options: {
-        report: 'gzip',
         banner: '//<%= bower.version %>\n'
       },
       dist: {
         files: {
           '<%= bower.name %>.min.js': '<%= bower.name %>.js'
         }
+      }
+    },
+    bytesize: {
+      all: {
+        src: [
+          '<%= bower.name %>.min.js'
+        ]
       }
     },
     jshint: {
@@ -41,9 +47,11 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-bytesize');
   grunt.loadNpmTasks('grunt-gh-pages');
 
-  grunt.registerTask('build', ['jshint', 'uglify', 'copy']);
+  grunt.registerTask('build', ['jshint', 'uglify', 'copy', 'bytesize']);
+  grunt.registerTask('deploy', ['build', 'gh-pages'])
   grunt.registerTask('default', 'watch');
 
 };
