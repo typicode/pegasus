@@ -22,6 +22,8 @@ Pegasus is a tiny lib (0.2 kB min/gzip) that lets you load data while loading ot
 
 Using this technique, you can reduce the time to display data in single page apps without touching the server.
 
+_Backbone user? See [backbone-pegasus](https://github.com/typicode/backbone-pegasus)._
+
 ## Install
 
 ```bash
@@ -77,10 +79,6 @@ _** jQuery is used for illustration only, you can use Pegasus with any other Jav
 __Note__: The same method can be applied with any other JavaScript library (Backbone, AngularJS, ...).
 
 __Tip__: You can also directly embed [pegasus.min.js](https://github.com/typicode/pegasus/blob/master/pegasus.min.js) into your html file to save a network call (it's smaller than the Google analytics tracking code).
-
-## See also
-
-https://github.com/typicode/backbone-pegasus
 
 ## Support
 
