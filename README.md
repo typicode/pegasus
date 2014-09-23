@@ -1,4 +1,4 @@
-# Pegasus [![Bower version](https://badge.fury.io/bo/pegasus.svg)](http://badge.fury.io/bo/pegasus)
+# Pegasus ![Bower version](http://img.shields.io/badge/bower%20package-0.1.6-brightgreen.svg?style=flat)
 
 > Load data while still loading other scripts
 
