@@ -2,27 +2,23 @@
 
 > Load data while still loading other scripts
 
-Do this
+With Pegasus, you can do this
 
-```
-load json 
-load script
-  →  start app
-```
+[![](http://i.imgur.com/8sVBtnB.png)](http://typicode.github.io/pegasus/)
 
 Instead of this
 
-```
-load script
-  →  start app 
-    →  load json
-```
+[![](http://i.imgur.com/ves4uIf.png)](http://typicode.github.io/pegasus/)
 
 Pegasus is a tiny lib (0.2 kB min/gzip) that lets you load data while loading other scripts. 
 
 Using this technique, you can reduce the time to display data in single page apps without touching the server.
 
 _Backbone user? See [backbone-pegasus](https://github.com/typicode/backbone-pegasus)._
+
+## Demo
+
+http://typicode.github.io/pegasus
 
 ## Install
 
@@ -32,7 +28,7 @@ $ bower install pegasus
 
 ## Benchmark
 
-Average time to display data on http://typicode.github.io/pegasus
+Average time to display data on the [demo site](http://typicode.github.io/pegasus).
 
 |             | jQuery only  | jQuery + Pegasus  |
 |:------------|:-------------|:------------------|
