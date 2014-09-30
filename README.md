@@ -16,15 +16,15 @@ Using this technique, you can reduce the time to display data in single page app
 
 _Backbone user? See [backbone-pegasus](https://github.com/typicode/backbone-pegasus)._
 
-## Demo
-
-http://typicode.github.io/pegasus
-
 ## Install
 
 ```bash
 $ bower install pegasus
 ```
+
+## Demo
+
+http://typicode.github.io/pegasus
 
 ## Benchmark
 
