@@ -34,9 +34,7 @@ Average time to display data on the [demo site](http://typicode.github.io/pegasu
 |:------------|:-------------|:------------------|
 |__EDGE__     | 3000 ms      | 2100 ms           |
 |__3G__       | 860 ms       | 640 ms            |
-|__DSL__      | 270 ms       | 230 ms            | 
-
-See the [screenshots](http://typicode.github.io/pegasus).
+|__DSL__      | 270 ms       | 230 ms            |
 
 _* Network Link Conditioner was used to slow down connection._
 
@@ -74,7 +72,7 @@ _** jQuery is used for illustration only, you can use Pegasus with any other Jav
 
 __Note__: The same method can be applied with any other JavaScript library (Backbone, AngularJS, ...).
 
-__Tip__: You can also directly embed [pegasus.min.js](https://github.com/typicode/pegasus/blob/master/pegasus.min.js) into your html file to save a network call (it's smaller than the Google analytics tracking code).
+__Tip__: You can also directly embed [pegasus.min.js](https://github.com/typicode/pegasus/blob/master/pegasus.min.js) code in your html file to save a network call (it's smaller than the Google analytics tracking code).
 
 ## Support
 
