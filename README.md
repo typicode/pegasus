@@ -59,13 +59,13 @@ _** jQuery is used for illustration only, you can use Pegasus with any other Jav
 <!-- Use the request promise to retrieve data in your app -->
 <script>
   request.then(
+    // success handler
     function(data, xhr) {
-      // success - xhr.status < 400
       // do something useful like
       $('#data').text(JSON.stringify(data));
     },
+    // error handler (optional)
     function(data, xhr) {
-      // error (optional) - xhr.status >= 400
       console.error(data, xhr.status)
     }
   );
