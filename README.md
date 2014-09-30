@@ -36,9 +36,7 @@ Average time to display data on the [demo site](http://typicode.github.io/pegasu
 |__3G__       | 860 ms       | 640 ms            |
 |__DSL__      | 270 ms       | 230 ms            |
 
-_* Network Link Conditioner was used to slow down connection._
-
-_** jQuery is used for illustration only, you can use Pegasus with any other Javascript library._
+__Note__: jQuery is used for illustration only, you can use Pegasus with any other Javascript library.
 
 ## Usage example
 
