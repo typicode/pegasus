@@ -2,26 +2,53 @@ module.exports = function(grunt) {
 
   grunt.initConfig({
     bower: grunt.file.readJSON('bower.json'),
+
+    copy: {
+      // copy pegasus.js to dist
+      dist: {
+        src:'src/<%= bower.name %>.js',
+        dest: 'dist/<%= bower.name %>.js'
+      },
+
+      // copy pegasus(.min).js to example folder
+      example: {
+        expand: true,
+        cwd: 'dist/',
+        src: ['<%= bower.name %>.js', '<%= bower.name %>.min.js'],
+        dest: 'example/scripts/'
+      }
+    },
+
+    concat: {
+      // create an AMD compatible version of pegasus
+      'dist/<%= bower.name %>-amd.js': ['src/<%= bower.name %>.js', 'src/amd.js']
+    },
+
     uglify: {
+      // minify everything in dist
       options: {
         banner: '//<%= bower.version %>\n'
       },
       dist: {
         files: {
-          '<%= bower.name %>.min.js': '<%= bower.name %>.js'
+          'dist/pegasus.min.js': 'dist/pegasus.js',
+          'dist/pegasus-amd.min.js': 'dist/pegasus-amd.js'
         }
       }
     },
+
     bytesize: {
       all: {
         src: [
-          '<%= bower.name %>.min.js'
+          'dist/<%= bower.name %>.min.js'
         ]
       }
     },
+
     jshint: {
-      files: ['<%= bower.name %>.js']
+      files: ['src/*.js']
     },
+
     watch: {
       files: ['gruntfile.js', '<%= jshint.files %>'],
       tasks: 'build',
@@ -29,12 +56,7 @@ module.exports = function(grunt) {
         atBegin: true
       }
     },
-    copy: {
-      main: {
-        src: ['<%= bower.name %>.js', '<%= bower.name %>.min.js'],
-        dest: 'example/scripts/'
-      }
-    },
+
     'gh-pages': {
       options: {
         base: 'example'
@@ -47,10 +69,11 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-contrib-concat')
   grunt.loadNpmTasks('grunt-bytesize');
   grunt.loadNpmTasks('grunt-gh-pages');
 
-  grunt.registerTask('build', ['jshint', 'uglify', 'copy', 'bytesize']);
+  grunt.registerTask('build', ['jshint', 'copy:dist', 'concat', 'uglify', 'copy:example', 'bytesize']);
   grunt.registerTask('deploy', ['build', 'gh-pages'])
   grunt.registerTask('default', 'watch');
 

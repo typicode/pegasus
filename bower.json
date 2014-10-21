@@ -1,12 +1,12 @@
 {
   "name": "pegasus",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "homepage": "https://github.com/typicode/pegasus",
   "authors": [
     "Typicode <typicode@gmail.com>"
   ],
   "description": "Mini xhr + promise. Display data faster in single page apps (jQuery, Backbone, Angular...).",
-  "main": "pegasus.js",
+  "main": "dist/pegasus.js",
   "keywords": [
     "ajax",
     "promise",
@@ -29,6 +29,7 @@
     "**/.*",
     "node_modules",
     "bower_components",
+    "src",
     "gruntfile.js",
     "package.json"
   ]
