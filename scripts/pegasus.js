@@ -1,13 +1,8 @@
-//
-// Pegasus
-//
-// Disclaimer: using byte saving techniques
-//
 // a   url (naming it a, beacause it will be reused to store callbacks)
 // xhr placeholder to avoid using var, not to be used
 function pegasus(a, xhr) {
   xhr = new XMLHttpRequest();
-  
+
   // Open url
   xhr.open('GET', a);
 
@@ -15,8 +10,8 @@ function pegasus(a, xhr) {
   a = [];
 
   // onSuccess handler
-  // onError handler
-  // cb placeholder to avoid using var, not to be used
+  // onError   handler
+  // cb        placeholder to avoid using var, should not be used
   xhr.onreadystatechange = xhr.then = function(onSuccess, onError, cb) {
 
     // Test if onSuccess is a function or a load event
