@@ -28,7 +28,13 @@ function pegasus(a, xhr) {
 
       // Safari doesn't support xhr.responseType = 'json'
       // so the response is parsed
-      if (cb) cb(JSON.parse(xhr.responseText), xhr);
+      if (cb) {
+        try {
+          cb(JSON.parse(xhr.responseText), xhr);
+        } catch (e) {
+          cb(null, xhr);
+        }
+      }
     }
   };
 
