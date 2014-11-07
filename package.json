@@ -1,10 +1,22 @@
 {
   "name": "pegasus",
-  "private": "true",
+  "version": "0.2.0",
+  "description": "Load data while still loading other scripts, works with jQuery, Backbone, Angular...",
+  "main": "lib/pegasus-commonjs.js",
   "scripts": {
     "start": "grunt",
     "gh-pages": "grunt gh-pages"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/typicode/pegasus.git"
+  },
+  "author": "Typicode <typicode@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/typicode/pegasus/issues"
+  },
+  "homepage": "https://github.com/typicode/pegasus",
   "devDependencies": {
     "grunt": "^0.4.4",
     "grunt-amd-wrap": "^1.0.1",

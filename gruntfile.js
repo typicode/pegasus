@@ -21,7 +21,8 @@ module.exports = function(grunt) {
 
     concat: {
       // create an AMD compatible version of pegasus
-      'dist/<%= bower.name %>-amd.js': ['src/<%= bower.name %>.js', 'src/amd.js']
+      'dist/<%= bower.name %>-amd.js': ['src/<%= bower.name %>.js', 'src/amd.js'],
+      'dist/<%= bower.name %>-commonjs.js': ['src/<%= bower.name %>.js', 'src/commonjs.js']
     },
 
     uglify: {
@@ -31,8 +32,7 @@ module.exports = function(grunt) {
       },
       dist: {
         files: {
-          'dist/pegasus.min.js': 'dist/pegasus.js',
-          'dist/pegasus-amd.min.js': 'dist/pegasus-amd.js'
+          'dist/pegasus.min.js': 'dist/pegasus.js'
         }
       }
     },

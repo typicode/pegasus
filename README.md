@@ -20,6 +20,7 @@ _Backbone user? See [backbone-pegasus](https://github.com/typicode/backbone-pega
 
 ```bash
 $ bower install pegasus
+$ npm install typicode/pegasus # For broserify
 ```
 
 ## Demo

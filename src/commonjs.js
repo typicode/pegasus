@@ -1,0 +1,2 @@
+// CommonJS
+module.export = pegasus;
