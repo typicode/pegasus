@@ -2,7 +2,7 @@
   "name": "pegasus",
   "version": "0.2.0",
   "description": "Load data while still loading other scripts, works with jQuery, Backbone, Angular...",
-  "main": "lib/pegasus-commonjs.js",
+  "main": "dist/pegasus-commonjs.js",
   "scripts": {
     "start": "grunt",
     "gh-pages": "grunt gh-pages"
