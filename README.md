@@ -10,7 +10,7 @@ Instead of this
 
 [![](http://i.imgur.com/ves4uIf.png)](http://typicode.github.io/pegasus/)
 
-Pegasus is a tiny lib (0.2 kB min/gzip) that lets you load data while loading other scripts. 
+Pegasus is a tiny lib (0.2 kB min/gzip) that lets you load data while loading other scripts.
 
 Using this technique, you can reduce the time to display data in single page apps without touching the server.
 
@@ -75,4 +75,4 @@ __Tip__: You can also directly embed [pegasus.min.js](https://github.com/typicod
 
 ## Support
 
-All modern browsers and IE7+
+All modern browsers and IE8+
