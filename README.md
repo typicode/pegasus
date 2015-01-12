@@ -45,7 +45,7 @@ __Note__: jQuery is used for illustration only, you can use Pegasus with any oth
 <!-- Load (or embed) Pegasus and start request(s) before loading any other script -->
 <script src="pegasus.min.js"></script>
 
-<!-- Request will start as soon as Pegasus is loaded -->
+<!-- Make your request(s) -->
 <script>
   var request = pegasus('http://api.example.com');
 </script>
@@ -53,7 +53,7 @@ __Note__: jQuery is used for illustration only, you can use Pegasus with any oth
 <!-- Load your app lib(s) -->
 <script src="jquery.js"></script>
 
-<!-- Use the request promise to retrieve data in your app -->
+<!-- Use the request "promise" to retrieve data in your app -->
 <script>
   request.then(
     // success handler
