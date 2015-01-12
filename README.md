@@ -71,7 +71,7 @@ __Note__: jQuery is used for illustration only, you can use Pegasus with any oth
 
 __Note__: The same method can be applied with any other JavaScript library (Backbone, AngularJS, ...).
 
-__Tip__: You can also directly embed [pegasus.min.js](https://github.com/typicode/pegasus/blob/master/dist/pegasus.min.js) code in your html file to save a network call (it's smaller than the Google analytics tracking code).
+__Tip__:  To save a network call, you can also directly embed [pegasus.min.js](https://github.com/typicode/pegasus/blob/master/dist/pegasus.min.js) code in your html file(it's smaller than the Google analytics tracking code).
 
 ## Support
 
