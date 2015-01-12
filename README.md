@@ -42,7 +42,7 @@ __Note__: jQuery is used for illustration only, you can use Pegasus with any oth
 ## Usage example
 
 ```html
-<!-- Load (or embed) Pegasus and start request(s) before loading any other script -->
+<!-- Load (or embed) Pegasus before loading any other script -->
 <script src="pegasus.min.js"></script>
 
 <!-- Make your request(s) -->
