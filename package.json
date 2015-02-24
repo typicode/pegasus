@@ -1,11 +1,12 @@
 {
   "name": "pegasus",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Load data while still loading other scripts, works with jQuery, Backbone, Angular...",
   "main": "dist/pegasus-commonjs.js",
   "scripts": {
     "start": "grunt",
-    "gh-pages": "grunt gh-pages"
+    "gh-pages": "grunt gh-pages",
+    "build": "grunt build"
   },
   "repository": {
     "type": "git",

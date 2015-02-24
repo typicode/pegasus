@@ -14,8 +14,8 @@ function pegasus(a, xhr) {
   // cb        placeholder to avoid using var, should not be used
   xhr.onreadystatechange = xhr.then = function(onSuccess, onError, cb) {
 
-    // Test if onSuccess is a function or a load event
-    if (onSuccess.call) a = [,onSuccess, onError];
+    // Test if onSuccess is a function
+    if (onSuccess && onSuccess.call) a = [,onSuccess, onError];
 
     // Test if request is complete
     if (xhr.readyState == 4) {
