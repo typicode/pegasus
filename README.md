@@ -2,13 +2,15 @@
 
 > Load data while still loading other scripts
 
+__Before__
+
+[![](http://i.imgur.com/ves4uIf.png)](http://typicode.github.io/pegasus/)
+
+__After__
+
 With Pegasus, you can do this
 
 [![](http://i.imgur.com/8sVBtnB.png)](http://typicode.github.io/pegasus/)
-
-Instead of this
-
-[![](http://i.imgur.com/ves4uIf.png)](http://typicode.github.io/pegasus/)
 
 Pegasus is a tiny lib (0.2 kB min/gzip) that lets you load data while loading other scripts.
 
