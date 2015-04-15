@@ -6,9 +6,7 @@ __Before__
 
 [![](http://i.imgur.com/ves4uIf.png)](http://typicode.github.io/pegasus/)
 
-__After__
-
-With Pegasus, you can do this
+__After (with Pegasus)__
 
 [![](http://i.imgur.com/8sVBtnB.png)](http://typicode.github.io/pegasus/)
 
