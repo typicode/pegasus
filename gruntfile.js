@@ -22,7 +22,8 @@ module.exports = function(grunt) {
     concat: {
       // create an AMD compatible version of pegasus
       'dist/<%= bower.name %>-amd.js': ['src/<%= bower.name %>.js', 'src/amd.js'],
-      'dist/<%= bower.name %>-commonjs.js': ['src/<%= bower.name %>.js', 'src/commonjs.js']
+      'dist/<%= bower.name %>-commonjs.js': ['src/<%= bower.name %>.js', 'src/commonjs.js'],
+      'dist/<%= bower.name %>-noconflict.js': ['src/noconflict.js', 'src/<%= bower.name %>.js']
     },
 
     uglify: {
