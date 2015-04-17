@@ -44,6 +44,5 @@ var pegasus = function(a, xhr) {
   // Return request
   return xhr;
 };
-
 // AMD support
 define('pegasus', [], function() { return pegasus; });
