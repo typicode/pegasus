@@ -1,3 +1,11 @@
+// Store original in case of collision
+var _pegasus = pegasus;
+
+function pegasusNoConflict() {
+  var pegasusFunction = pegasus;
+  pegasus = _pegasus;
+  return pegasusFunction;
+}
 // a   url (naming it a, beacause it will be reused to store callbacks)
 // xhr placeholder to avoid using var, not to be used
 var pegasus = function(a, xhr) {
@@ -44,5 +52,3 @@ var pegasus = function(a, xhr) {
   // Return request
   return xhr;
 };
-// CommonJS
-module.export = pegasus;

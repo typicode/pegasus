@@ -1,6 +1,6 @@
 // a   url (naming it a, beacause it will be reused to store callbacks)
 // xhr placeholder to avoid using var, not to be used
-function pegasus(a, xhr) {
+var pegasus = function(a, xhr) {
   xhr = new XMLHttpRequest();
 
   // Open url
@@ -43,6 +43,6 @@ function pegasus(a, xhr) {
 
   // Return request
   return xhr;
-}
+};
 // AMD support
 define('pegasus', [], function() { return pegasus; });
