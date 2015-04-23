@@ -1,2 +1,7 @@
-// AMD support
-define('pegasus', [], function() { return pegasus; });
+define('pegasus', [], function() {
+
+@@include('pegasus.js')
+
+return pegasus;
+
+});

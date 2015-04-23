@@ -44,5 +44,5 @@ function pegasus(a, xhr) {
   // Return request
   return xhr;
 }
-// CommonJS
+
 module.export = pegasus;

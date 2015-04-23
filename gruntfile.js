@@ -19,10 +19,14 @@ module.exports = function(grunt) {
       }
     },
 
-    concat: {
-      // create an AMD compatible version of pegasus
-      'dist/<%= bower.name %>-amd.js': ['src/<%= bower.name %>.js', 'src/amd.js'],
-      'dist/<%= bower.name %>-commonjs.js': ['src/<%= bower.name %>.js', 'src/commonjs.js']
+    // Create AMD and CommonJS specific versions
+    includereplace: {
+      js: {
+        files: {
+          'dist/pegasus-amd.js': 'src/amd.js',
+          'dist/pegasus-commonjs.js': 'src/commonjs.js',
+        }
+      }
     },
 
     uglify: {
@@ -66,14 +70,13 @@ module.exports = function(grunt) {
   });
 
   grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-copy');
-  grunt.loadNpmTasks('grunt-contrib-concat')
+  grunt.loadNpmTasks('grunt-include-replace')
   grunt.loadNpmTasks('grunt-bytesize');
   grunt.loadNpmTasks('grunt-gh-pages');
 
-  grunt.registerTask('build', ['jshint', 'copy:dist', 'concat', 'uglify', 'copy:example', 'bytesize']);
+  grunt.registerTask('build', ['copy:dist', 'includereplace', 'uglify', 'copy:example', 'bytesize']);
   grunt.registerTask('deploy', ['build', 'gh-pages'])
   grunt.registerTask('default', 'watch');
 

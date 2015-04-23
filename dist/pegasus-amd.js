@@ -1,3 +1,5 @@
+define('pegasus', [], function() {
+
 // a   url (naming it a, beacause it will be reused to store callbacks)
 // xhr placeholder to avoid using var, not to be used
 function pegasus(a, xhr) {
@@ -44,5 +46,7 @@ function pegasus(a, xhr) {
   // Return request
   return xhr;
 }
-// AMD support
-define('pegasus', [], function() { return pegasus; });
+
+return pegasus;
+
+});
