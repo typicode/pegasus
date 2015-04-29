@@ -1,3 +1,3 @@
 @@include('pegasus.js')
 
-module.export = pegasus;
+module.exports = pegasus;
