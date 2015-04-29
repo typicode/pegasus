@@ -45,4 +45,4 @@ function pegasus(a, xhr) {
   return xhr;
 }
 
-module.export = pegasus;
+module.exports = pegasus;
