@@ -14,7 +14,7 @@ Pegasus is a tiny lib (0.2 kB min/gzip) that lets you load data while loading ot
 
 Using this technique, you can reduce the time to display data in single page apps without touching the server.
 
-_Backbone user? See [backbone-pegasus](https://github.com/typicode/backbone-pegasus)._
+_See also [fetchival](https://github.com/typicode/fetchival), a small fetch wrapper._
 
 ## Install
 
@@ -76,3 +76,7 @@ __Tip__:  To save a network call, you can also directly embed [pegasus.min.js](h
 ## Support
 
 All modern browsers and IE8+
+
+## License
+
+MIT - [Typicode](https://github.com/typicode)
