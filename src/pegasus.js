@@ -11,29 +11,30 @@ function pegasus(a, xhr) {
 
   // onSuccess handler
   // onError   handler
-  // cb        placeholder to avoid using var, should not be used
-  xhr.onreadystatechange = xhr.then = function(onSuccess, onError, cb) {
+  // cb, js    placeholders to avoid using var, should not be used
+  xhr.onreadystatechange = xhr.then = function(onSuccess, onError, cb, js) {
 
     // Test if onSuccess is a function
-    if (onSuccess && onSuccess.call) a = [,onSuccess, onError];
+    if (onSuccess && onSuccess.call) { a = [null, onSuccess, onError]; }
 
     // Test if request is complete
-    if (xhr.readyState == 4) {
+    if (xhr.readyState === 4) {
 
       // index will be:
       // 0 if undefined
       // 1 if status is between 200 and 399
       // 2 if status is over
-      cb = a[0|xhr.status / 200];
+      cb = a[0 | xhr.status / 200];
 
       // Safari doesn't support xhr.responseType = 'json'
       // so the response is parsed
       if (cb) {
         try {
-          cb(JSON.parse(xhr.responseText), xhr);
+          js = JSON.parse(xhr.responseText);
         } catch (e) {
-          cb(null, xhr);
+          js = null;
         }
+        cb(js, xhr);
       }
     }
   };
