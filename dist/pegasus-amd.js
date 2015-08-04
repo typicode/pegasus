@@ -13,8 +13,8 @@ function pegasus(a, xhr) {
 
   // onSuccess handler
   // onError   handler
-  // cb        placeholder to avoid using var, should not be used
-  xhr.onreadystatechange = xhr.then = function(onSuccess, onError, cb) {
+  // cb, data  placeholder to avoid using var, should not be used
+  xhr.onreadystatechange = xhr.then = function(onSuccess, onError, cb, data) {
 
     // Test if onSuccess is a function
     if (onSuccess && onSuccess.call) a = [,onSuccess, onError];
@@ -32,10 +32,11 @@ function pegasus(a, xhr) {
       // so the response is parsed
       if (cb) {
         try {
-          cb(JSON.parse(xhr.responseText), xhr);
+          data = JSON.parse(xhr.responseText)
         } catch (e) {
-          cb(null, xhr);
+          data = null
         }
+        cb(data, xhr);
       }
     }
   };
@@ -46,6 +47,7 @@ function pegasus(a, xhr) {
   // Return request
   return xhr;
 }
+
 
 return pegasus;
 
