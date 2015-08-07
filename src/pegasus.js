@@ -1,4 +1,4 @@
-// a   url (naming it a, beacause it will be reused to store callbacks)
+// a   url (naming it a, because it will be reused to store callbacks)
 // xhr placeholder to avoid using var, not to be used
 function pegasus(a, xhr) {
   xhr = new XMLHttpRequest();
