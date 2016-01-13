@@ -23,6 +23,8 @@ $ bower install pegasus
 $ npm install @typicode/pegasus # For browserify
 ```
 
+__Important__ please note that pegasus is available on npm under `@typicode/pegasus`
+
 ## Demo
 
 http://typicode.github.io/pegasus
