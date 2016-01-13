@@ -1,6 +1,6 @@
 # Pegasus ![Bower version](http://img.shields.io/badge/bower%20package-0.3.2-brightgreen.svg?style=flat)
 
-> Load data while still loading other scripts
+> Load JSON while still loading other scripts
 
 __Before__
 
@@ -10,7 +10,7 @@ __After (with Pegasus)__
 
 [![](http://i.imgur.com/8sVBtnB.png)](http://typicode.github.io/pegasus/)
 
-Pegasus is a tiny lib (0.2 kB min/gzip) that lets you load data while loading other scripts.
+Pegasus is a tiny lib (0.2 kB min/gzip) that lets you load JSON data while loading other scripts.
 
 Using this technique, you can reduce the time to display data in single page apps without touching the server.
 
@@ -53,7 +53,7 @@ __Note__: jQuery is used for illustration only, you can use Pegasus with any oth
 <!-- Load your app lib(s) -->
 <script src="jquery.js"></script>
 
-<!-- Use the request "promise" to retrieve data in your app -->
+<!-- Use .then() method to retrieve data in your app -->
 <script>
   request.then(
     // success handler
@@ -69,7 +69,7 @@ __Note__: jQuery is used for illustration only, you can use Pegasus with any oth
 </script>
 ```
 
-__Note__: The same method can be applied with any other JavaScript library (Backbone, AngularJS, ...).
+The same method can be applied with any other JavaScript library (Backbone, AngularJS, ...).
 
 __Tip__:  To save a network call, you can also directly embed [pegasus.min.js](https://github.com/typicode/pegasus/blob/master/dist/pegasus.min.js) code in your html file(it's smaller than the Google analytics tracking code).
 
