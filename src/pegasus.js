@@ -2,9 +2,7 @@
 // xhr placeholder to avoid using var, not to be used
 function pegasus(a, xhr) {
   xhr = new XMLHttpRequest();
-
-  // Open url
-  xhr.open('GET', a);
+  xhr.timeout = 7000;
 
   // Reuse a to store callbacks
   a = [];
@@ -18,7 +16,7 @@ function pegasus(a, xhr) {
     if (onSuccess && onSuccess.call) a = [,onSuccess, onError];
 
     // Test if request is complete
-    if (xhr.readyState == 4) {
+    if (xhr.readyState === 4) {
 
       // index will be:
       // 0 if undefined
@@ -39,8 +37,9 @@ function pegasus(a, xhr) {
     }
   };
 
-  // Send
-  xhr.send();
+  // Send the get request
+  xhr.open('GET', a, true);
+  xhr.send(null);
 
   // Return request
   return xhr;
