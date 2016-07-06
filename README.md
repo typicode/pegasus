@@ -34,7 +34,7 @@ $ bower install pegasus
 
 ### Embedded (recommended)
 
-To save a network call, you can simply paste the following code [pegasus.min.js](https://github.com/typicode/pegasus/blob/master/dist/pegasus.min.js) in your HTML before other scripts. It's smaller than the Google analytics tracking code.
+To save a network call, you can simply paste the following code [pegasus.min.js](https://github.com/typicode/pegasus/blob/master/dist/pegasus.min.js) in your HTML page before other scripts. It's smaller than the Google analytics tracking code.
 
 ## Demo
 
