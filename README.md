@@ -1,6 +1,6 @@
-# Pegasus ![Bower version](http://img.shields.io/badge/bower%20package-0.3.2-brightgreen.svg?style=flat)
+# Pegasus ![](https://badge-size.herokuapp.com/typicode/pegasus/master/dist/pegasus.min.js.svg?compression=gzip&style=flat-square)
 
-> Pegasus is a tiny lib (0.2 kB min/gzip) that lets you load JSON data while loading other scripts.
+> Pegasus is a tiny lib that lets you load JSON data while loading other scripts.
 
 If you have a static website, using this technique, you can reduce the time to display data. Works with any JS lib (React, Vue, jQuery, ...).
 
@@ -15,10 +15,6 @@ __After (with Pegasus)__
 [![](http://i.imgur.com/8sVBtnB.png)](http://typicode.github.io/pegasus/)
 
 _JSON (yellow bar) and the JS library (orange bar) are downloaded at the same time._
-
-
-
-
 
 ## Install
 
@@ -68,7 +64,7 @@ __Note__: jQuery is used for illustration only, you can use Pegasus with any oth
 </script>
 
 <!-- Load your app lib(s) -->
-<script src="jquery.js"></script>
+<script src="lib.js"></script>
 
 <!-- Use .then() method to retrieve data in your app -->
 <script>
@@ -85,8 +81,6 @@ __Note__: jQuery is used for illustration only, you can use Pegasus with any oth
   );
 </script>
 ```
-
-The same method can be applied with any other JavaScript library.
 
 ## Support
 
