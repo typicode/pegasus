@@ -15,7 +15,7 @@ function pegasus(a, xhr) {
   xhr.onreadystatechange = xhr.then = function(onSuccess, onError, cb, data) {
 
     // Test if onSuccess is a function
-    if (onSuccess && onSuccess.call) a = [,onSuccess, onError];
+    if (typeof(onSuccess) !== 'undefined' && onSuccess.call) a = [,onSuccess, onError];
 
     // Test if request is complete
     if (xhr.readyState == 4) {
