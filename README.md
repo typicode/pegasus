@@ -1,4 +1,4 @@
-# Pegasus ![](https://badge-size.herokuapp.com/typicode/pegasus/master/dist/pegasus.min.js.svg?compression=gzip&style=flat-square)
+# Pegasus [![](https://badge.fury.io/js/%40typicode%2Fpegasus.svg)](https://www.npmjs.com/package/@typicode/pegasus) ![](https://badge-size.herokuapp.com/typicode/pegasus/master/dist/pegasus.min.js.svg?compression=gzip)
 
 > Pegasus is a tiny lib that lets you load JSON data while loading other scripts.
 
@@ -26,15 +26,9 @@ $ npm install @typicode/pegasus
 
 Please note that pegasus is available on npm under [`@typicode/pegasus`](https://www.npmjs.com/package/@typicode/pegasus)
 
-### Bower
-
-```
-$ bower install pegasus
-```
-
 ### Embedded (recommended)
 
-To save a network call, you can simply paste the following code [pegasus.min.js](https://github.com/typicode/pegasus/blob/master/dist/pegasus.min.js) in your HTML page before other scripts. It's smaller than the Google analytics tracking code.
+To save a network call, it's recommended to simply paste the following code [pegasus.min.js](https://github.com/typicode/pegasus/blob/master/dist/pegasus.min.js) in your HTML page before other scripts. It's smaller than the Google analytics tracking code.
 
 ## Demo
 
