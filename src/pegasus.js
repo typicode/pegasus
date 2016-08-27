@@ -1,45 +1,47 @@
 // a   url (naming it a, because it will be reused to store callbacks)
+// e   timeout error placeholder to avoid using var, not to be used
 // xhr placeholder to avoid using var, not to be used
-function pegasus(a, xhr) {
+function pegasus(a, e, xhr) {
   xhr = new XMLHttpRequest();
+  xhr.responseType = 'json';
 
-  // Open url
+  // Set URL
   xhr.open('GET', a);
 
-  // Reuse a to store callbacks
+  // Don't need a to store URL anymore
+  // Reuse it to store callbacks
   a = [];
 
-  // onSuccess handler
-  // onError   handler
-  // cb, data  placeholder to avoid using var, should not be used
-  xhr.onreadystatechange = xhr.then = function(onSuccess, onError, cb, data) {
+  xhr.timeout = pegasus.timeout || 10 * 1000;
 
+  xhr.ontimeout = function (event) {
+    e = event
+  }
+
+  xhr.onreadystatechange = xhr.then = function(onSuccess, onError, cb, data) {
     // Test if onSuccess is a function
-    if (onSuccess && onSuccess.call) a = [,onSuccess, onError];
+    // Means that the user called xhr.then
+    if (onSuccess && onSuccess.call) {
+      a = [,onSuccess, onError];
+    }
+
+    // Test if there's a timeout error
+    e && a[2] && a[2](e, xhr)
 
     // Test if request is complete
     if (xhr.readyState == 4) {
-
       // index will be:
       // 0 if undefined
       // 1 if status is between 200 and 399
       // 2 if status is over
       cb = a[0|xhr.status / 200];
-
-      // Safari doesn't support xhr.responseType = 'json'
-      // so the response is parsed
       if (cb) {
-        try {
-          data = JSON.parse(xhr.responseText)
-        } catch (e) {
-          data = null
-        }
-        cb(data, xhr);
+        cb(xhr.response, xhr);
       }
     }
   };
 
-  // Send
+  // Send the GET request
   xhr.send();
 
   // Return request
