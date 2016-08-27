@@ -3,6 +3,7 @@
 // xhr placeholder to avoid using var, not to be used
 function pegasus(a, e, xhr) {
   xhr = new XMLHttpRequest();
+  xhr.responseType = 'json';
 
   // Set URL
   xhr.open('GET', a);
@@ -20,7 +21,9 @@ function pegasus(a, e, xhr) {
   xhr.onreadystatechange = xhr.then = function(onSuccess, onError, cb, data) {
     // Test if onSuccess is a function
     // Means that the user called xhr.then
-    if (onSuccess && onSuccess.call) a = [,onSuccess, onError];
+    if (onSuccess && onSuccess.call) {
+      a = [,onSuccess, onError];
+    }
 
     // Test if there's a timeout error
     e && a[2] && a[2](e, xhr)
@@ -32,14 +35,8 @@ function pegasus(a, e, xhr) {
       // 1 if status is between 200 and 399
       // 2 if status is over
       cb = a[0|xhr.status / 200];
-
-      // Safari doesn't support xhr.responseType = 'json'
-      // so the response is parsed
       if (cb) {
-        try {
-          data = JSON.parse(xhr.responseText)
-        } catch (e) {}
-        cb(data, xhr);
+        cb(xhr.response, xhr);
       }
     }
   };
