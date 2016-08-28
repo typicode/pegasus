@@ -18,17 +18,21 @@ _JSON (yellow bar) and the JS library (orange bar) are downloaded at the same ti
 
 ## Install
 
+### Embedded (recommended)
+
+To save a network call, it's recommended to simply paste the following code [pegasus.min.js](https://github.com/typicode/pegasus/blob/master/dist/pegasus.min.js) in your HTML page before other scripts.
+
+### CDN
+
+https://npmcdn.com/@typicode/pegasus/dist/pegasus.min.js
+
 ### npm
 
 ```bash
 $ npm install @typicode/pegasus
 ```
 
-Please note that pegasus is available on npm under [`@typicode/pegasus`](https://www.npmjs.com/package/@typicode/pegasus)
-
-### Embedded (recommended)
-
-To save a network call, it's recommended to simply paste the following code [pegasus.min.js](https://github.com/typicode/pegasus/blob/master/dist/pegasus.min.js) in your HTML page before other scripts. It's smaller than the Google analytics tracking code.
+Please note that pegasus is available on npm under __[@typicode/pegasus](https://www.npmjs.com/package/@typicode/pegasus)__
 
 ## Demo
 
@@ -78,7 +82,7 @@ __Note__: jQuery is used for illustration only, you can use Pegasus with any oth
 
 ## Support
 
-All modern browsers and IE8+
+All modern browsers and IE9+
 
 ## License
 

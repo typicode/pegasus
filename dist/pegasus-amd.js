@@ -5,7 +5,6 @@ define('pegasus', [], function() {
 // xhr placeholder to avoid using var, not to be used
 function pegasus(a, e, xhr) {
   xhr = new XMLHttpRequest();
-  xhr.responseType = 'json';
 
   // Set URL
   xhr.open('GET', a);
@@ -38,7 +37,12 @@ function pegasus(a, e, xhr) {
       // 2 if status is over
       cb = a[0|xhr.status / 200];
       if (cb) {
-        cb(xhr.response, xhr);
+        try {
+          data = JSON.parse(xhr.responseText)
+        } catch (e) {
+          data = null
+        }
+        cb(data, xhr);
       }
     }
   };
