@@ -11,7 +11,7 @@ function pegasus(a, e, xhr) {
   // Reuse it to store callbacks
   a = [];
 
-  xhr.timeout = pegasus.timeout || 10 * 1000;
+  pegasus.timeout && xhr.timeout = pegasus.timeout;
 
   xhr.ontimeout = function (event) {
     e = event

@@ -80,6 +80,8 @@ __Note__: jQuery is used for illustration only, you can use Pegasus with any oth
 </script>
 ```
 
+Optionally, you can set a timeout using `pegasus.timeout = milliseconds`
+
 ## Support
 
 All modern browsers and IE9+
