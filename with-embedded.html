@@ -116,10 +116,7 @@
 
     <!-- pegasus.min.js code is embedded to save a network call -->
     <script>
-      function pegasus(a,b){return b=new XMLHttpRequest,b.open("GET",a),
-      a=[],b.onreadystatechange=b.then=function(c,d,e){if(c.call&&(a=[,c,d]),
-      4==b.readyState&&(e=a[0|b.status/200]))try{e(JSON.parse(b.responseText),b)}
-      catch(f){e(null,b)}},b.send(),b}
+      function pegasus(a,b,c){return c=new XMLHttpRequest,c.open("GET",a),a=[],c.timeout=pegasus.timeout||1e4,c.ontimeout=function(a){b=a},c.onreadystatechange=c.then=function(d,e,f,g){if(d&&d.call&&(a=[,d,e]),b&&a[2]&&a[2](b,c),4==c.readyState&&(f=a[0|c.status/200])){try{g=JSON.parse(c.responseText)}catch(a){g=null}f(g,c)}},c.send(),c}
     </script>
 
     <!-- Start request -->
