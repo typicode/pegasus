@@ -24,7 +24,7 @@ To save a network call, it's recommended to simply paste the following code [peg
 
 ### CDN
 
-https://npmcdn.com/@typicode/pegasus/dist/pegasus.min.js
+https://unpkg.com/@typicode/pegasus/dist/pegasus.min.js
 
 ### npm
 
